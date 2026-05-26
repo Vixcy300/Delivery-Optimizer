@@ -1,84 +1,164 @@
-# 📍 PathSync: Next-Gen Logistics & Delivery Optimizer
+<!-- Header Image -->
+<p align="center">
+  <img src="assets/banner.png" alt="PathSync Banner" width="100%" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);" />
+</p>
 
-PathSync is a high-performance, premium web-based delivery optimization engine designed to model, solve, and analyze complex vehicle routing and network optimization problems. Built with raw vanilla HTML5, CSS3, and JavaScript, PathSync delivers a stunning "MNC-style" interactive experience, featuring gorgeous visual representations, live mathematical simulations, and rich benchmark evidence.
+<!-- Title & Tagline -->
+<h1 align="center">📍 PathSync</h1>
+<p align="center">
+  <strong>Next-Generation Logistics Delivery Optimization Engine</strong>
+  <br />
+  <i>Leveraging graph theory, greedy heuristics, and advanced mathematics to compute real-time, high-efficiency delivery paths.</i>
+</p>
 
-🚀 **Live Deployment on Vercel:** Fully compatible with Vercel's zero-config static site deployment.
-
----
-
-## ✨ Features & Modules
-
-### 1. 🌐 Delivery Data Collection and Network Modeling
-*   **Interactive Node Graph:** Visualize delivery points, central hubs (e.g., T Nagar, OMR Tech Park), and active routing pathways.
-*   **Flexible Inputs:** Easily customize nodes, edge weights, distances, and toll parameters in real-time.
-*   **Toll-Cost Calculator:** Accurate modeling of toll systems with updated local route parameters (incorporating OMR toll closures).
-
-### 2. ⚡ Route Optimization & Vehicle Routing
-*   **Dijkstra’s Algorithm:** Find the absolute shortest path from a single central hub to any target customer node.
-*   **A\* Search Algorithm:** Compute paths efficiently using heuristics for faster convergence.
-*   **Greedy TSP (Traveling Salesperson Problem):** Calculate optimal multi-stop closed-loop tours for vehicle fleets.
-*   **Prim’s MST (Minimum Spanning Tree):** Compute the most efficient backbone layout to connect all delivery points with minimal cabling/distance cost.
-
-### 3. 📊 Analytics & Benchmark Evidence
-*   **Dual-Axis Mixed Chart:** Real-time visual comparison of algorithm scalability. Track execution time (ms) on one axis and memory utilization (KB) on the other.
-*   **Tabular Empirical Data:** View clear, side-by-side evidence comparing speed, accuracy, and stop limits across algorithms (Dijkstra vs. A* vs. Greedy TSP vs. Prim's MST).
-
----
-
-## 🛠️ Technology Stack
-
-*   **Frontend Core:** HTML5, modern vanilla CSS3 (utilizing modern typography, dark-mode glassmorphism, HSL tailormade colors, and micro-animations).
-*   **Interactive Graphs:** [vis.js](https://visjs.github.io/vis-network/) for physics-optimized, live neural network representations.
-*   **Dynamic Charts:** [Chart.js](https://www.chartjs.org/) for multi-axis responsive performance data plotting.
-*   **Deployment:** Static hosting ready, optimized for Vercel, Netlify, or Github Pages.
+<!-- Tech Badges (Shields.io) -->
+<p align="center">
+  <a href="https://vercel.com">
+    <img src="https://img.shields.io/badge/Vercel-Deploy%20Ready-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Deploy" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/vis.js-Graph%20Engine-8B5CF6?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="vis.js" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Chart.js-Performance-FF6384?style=for-the-badge&logo=chart.js&logoColor=white" alt="Chart.js" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/GSAP-Animations-82C341?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
+  </a>
+</p>
 
 ---
 
-## 🚀 Getting Started
+## 🌟 Interactive Experience & Micro-Animations
 
-No heavy installations or build processes required! PathSync is a zero-dependency static web application.
+PathSync isn't a static utility app—it's a living, breathing graphical experience designed with **MNC-grade aesthetics** and rich interactive motion:
 
-### Running Locally
+*   **⚡ Hero Neural Network (vis.js):** At the top of the landing page, a live node-link neural web dynamically pulses traffic payloads along optimized pathways. You can drag, click, and interact with the nodes, with natural-feeling spring physics!
+*   **🎭 GreenSock ScrollMagic (GSAP):** Experience elegant entrance transitions. Text elements, feature containers, and the real-time comparison tables slide, scale, and stagger into view smoothly as you scroll.
+*   **📊 Live Dual-Axis Scale Plotter (Chart.js):** Benchmark results render dynamically with micro-load animations, plotting sub-millisecond execution times against memory foot-print costs.
+*   **🕯️ Glowing Dark-Mode Glassmorphism:** Fully optimized CSS stylesheets (`css/landing.css`) with deep rich blue/black space colors (`#0b1120`), glowing border-radius containers, and high-tech box shadows.
 
-1.  **Clone the repository:**
+---
+
+## 🚀 Interactive Application Modules
+
+<details open>
+  <summary><b>1. 🌐 Delivery Data Collection and Network Modeling</b></summary>
+  <p>Allows routing administrators to configure a full network of delivery locations, client addresses, and central hubs.</p>
+  <ul>
+    <li>Interactive graph visualizations showing hubs (like <i>T Nagar Hub</i>, <i>OMR Tech Park</i>) and delivery locations.</li>
+    <li>Real-time node-adding, deleting, and edge-weight modifications.</li>
+    <li>Dynamic Toll-Cost calculator (accounting for historical OMR toll-free stretches).</li>
+  </ul>
+</details>
+
+<details>
+  <summary><b>2. ⚡ Route Optimization & Algorithm Solvers</b></summary>
+  <p>Features 4 industry-standard graph algorithm models implementing raw computational logistics:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Algorithm</th>
+        <th>Visual Color</th>
+        <th>Behavior Profile</th>
+        <th>Optimization Goal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Dijkstra</b></td>
+        <td>🟢 Emerald Green</td>
+        <td>Single-source search</td>
+        <td>Shortest route from center hub to destination</td>
+      </tr>
+      <tr>
+        <td><b>A* Search</b></td>
+        <td>🔵 Sky Blue</td>
+        <td>Heuristic-driven speed</td>
+        <td>Ultra-fast target-point routing</td>
+      </tr>
+      <tr>
+        <td><b>Greedy TSP</b></td>
+        <td>🟡 Amber Gold</td>
+        <td>Multi-stop loop</td>
+        <td>Optimal closed path covering all active stops</td>
+      </tr>
+      <tr>
+        <td><b>Prim's MST</b></td>
+        <td>🔴 Crimson Red</td>
+        <td>Spanning tree</td>
+        <td>Connecting nodes with minimum total line network</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<details>
+  <summary><b>3. 🚗 Dynamic Dispatch & Connected Intelligence</b></summary>
+  <p>Simulate fleet assignments instantly!</p>
+  <ul>
+    <li><b>Fleet Table:</b> Live dispatch panel tracking drivers, vehicle type (electric vs. truck), and delivery payload.</li>
+    <li><b>Real-Time Dispatching:</b> Instantly assign optimal calculated paths to idle drivers, transitioning statuses to <i>"En Route"</i> with live progress tracking logs.</li>
+    <li><b>Demand Heatmaps:</b> Visualized hotzones directly map high-demand districts. Clicking a zone auto-fills details to expand your model.</li>
+  </ul>
+</details>
+
+---
+
+## ⚡ Computational Performance Benchmarks
+
+### Scale Scaling Chart
+
+PathSync executes heavy graph computations completely client-side in sub-millisecond windows. Below is the theoretical algorithmic complexity profile compared inside the engine:
+
+$$\begin{array}{c|c|c}
+\text{\bf Algorithm} & \text{\bf Time Complexity} & \text{\bf Space Complexity} \\
+\hline
+\text{Dijkstra's Shortest Path} & O((V + E) \log V) & O(V) \\
+\text{A* Search} & O(b^d) & O(V) \\
+\text{Greedy TSP Heuristic} & O(V^2) & O(V) \\
+\text{Prim's Minimum Spanning Tree} & O(E \log V) & O(V)
+\end{array}$$
+
+*   **V** = Vertices (Delivery points)
+*   **E** = Edges (Connected roads)
+
+---
+
+## 💻 Running PathSync Locally
+
+Run PathSync on your local computer instantly with no package dependencies:
+
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/Vixcy300/Delivery-Optimizer.git
     cd Delivery-Optimizer
     ```
-
-2.  **Serve the files:**
-    You can simply double-click `index.html` to open it in your browser, or serve it using an HTTP server for the best experience:
-    ```bash
-    # Using Node.js
+2.  **Launch a Local Server:**
+    ```powershell
+    # Using Node.js npx:
     npx http-server -p 3000
     
-    # Or using Python
+    # Or using Python:
     python -m http.server 3000
     ```
-
-3.  **Explore the App:**
-    Open your browser to `http://localhost:3000` to view the stunning landing page, and click **"Launch Dashboard"** to enter the core Route Optimization Engine.
+3.  **Launch Dashboard:** Open `http://localhost:3000` in your web browser.
 
 ---
 
-## 🌎 Vercel Deployment
+## ☁️ Zero-Config Vercel Deployment
 
-This repository is pre-configured for **instant Vercel deployment**.
-1.  Go to [Vercel](https://vercel.com).
-2.  Click **"New Project"** and import the `Delivery-Optimizer` repository.
-3.  Vercel will automatically detect the static project and deploy it instantly. No build commands or output directory modifications required!
+Deploying PathSync to Vercel takes 30 seconds:
 
----
-
-## 🔬 Computational Performance Summary
-
-| Algorithm | Computational Complexity | Typical Use Case | Accuracy | Scalability |
-| :--- | :--- | :--- | :--- | :--- |
-| **Dijkstra** | $O((V + E) \log V)$ | Single-source shortest path | $100\%$ | High |
-| **A\* Search** | $O(b^d)$ (heuristic dependent) | Speed-optimized point-to-point | $98\% - 100\%$ | Very High |
-| **Greedy TSP** | $O(V^2)$ | Multi-stop round trips (TSP) | $\approx 92\%$ (Heuristic) | Moderate |
-| **Prim's MST** | $O(E \log V)$ | Backbone route infrastructure | $100\%$ | High |
+1.  Log in to [Vercel](https://vercel.com).
+2.  Click **Add New...** -> **Project**.
+3.  Import this `Delivery-Optimizer` repository.
+4.  Click **Deploy**! Vercel handles the static hosting and serves it at your global URL with automated SSL and edge caching.
 
 ---
-
-Developed with ❤️ for high-efficiency logistics engineering.
+<p align="center">
+  Made with 💚 by the PathSync Logistics Engineering Team.
+</p>
