@@ -1,0 +1,36 @@
+import { generateId } from './helpers.js';
+
+export const demoScenarios = {
+    chennai: {
+        locations: [
+            { id: 'c-depot', name: 'Chennai Central Depot', type: 'warehouse', priority: 'high', capacity: 2000, timeWindow: '06:00 - 20:00', lat: 13.0827, lng: 80.2707 },
+            { id: 'c-1', name: 'Anna Nagar Drop', type: 'customer', priority: 'normal', capacity: 50, timeWindow: '09:00 - 12:00', lat: 13.0850, lng: 80.2101 },
+            { id: 'c-2', name: 'T. Nagar Hub', type: 'hub', priority: 'high', capacity: 500, timeWindow: '08:00 - 18:00', lat: 13.0382, lng: 80.2364 },
+            { id: 'c-3', name: 'Adyar Delivery', type: 'customer', priority: 'normal', capacity: 30, timeWindow: '10:00 - 15:00', lat: 13.0033, lng: 80.2555 },
+            { id: 'c-4', name: 'Velachery Point', type: 'customer', priority: 'low', capacity: 25, timeWindow: '13:00 - 17:00', lat: 12.9815, lng: 80.2180 },
+            { id: 'c-5', name: 'OMR Tech Park', type: 'customer', priority: 'high', capacity: 150, timeWindow: '09:00 - 17:00', lat: 12.9675, lng: 80.2489 }
+        ],
+        edges: [] // Will auto-generate via Haversine inside app.js if empty, but we'll let app.js rebuild them for now
+    },
+    delhi: {
+        locations: [
+            { id: 'd-wh1', name: 'Okhla Warehouse', type: 'warehouse', priority: 'high', capacity: 5000, timeWindow: '05:00 - 22:00', lat: 28.5355, lng: 77.2811 },
+            { id: 'd-wh2', name: 'Gurugram Facility', type: 'warehouse', priority: 'high', capacity: 4000, timeWindow: '06:00 - 20:00', lat: 28.4595, lng: 77.0266 },
+            { id: 'd-1', name: 'Connaught Place', type: 'customer', priority: 'high', capacity: 120, timeWindow: '10:00 - 16:00', lat: 28.6304, lng: 77.2177 },
+            { id: 'd-2', name: 'Saket Delivery', type: 'customer', priority: 'normal', capacity: 60, timeWindow: '12:00 - 18:00', lat: 28.5246, lng: 77.2066 },
+            { id: 'd-3', name: 'Noida Hub', type: 'hub', priority: 'normal', capacity: 800, timeWindow: '08:00 - 19:00', lat: 28.5355, lng: 77.3910 },
+            { id: 'd-4', name: 'Rohini Sector 18', type: 'customer', priority: 'low', capacity: 45, timeWindow: '09:00 - 14:00', lat: 28.7366, lng: 77.1131 }
+        ],
+        edges: []
+    },
+    mumbai: {
+        locations: [
+            { id: 'm-hub', name: 'Dharavi Distribution Hub', type: 'hub', priority: 'high', capacity: 1500, timeWindow: '04:00 - 23:00', lat: 19.0380, lng: 72.8538 },
+            { id: 'm-1', name: 'Bandra West Drop', type: 'customer', priority: 'normal', capacity: 40, timeWindow: '09:00 - 13:00', lat: 19.0596, lng: 72.8295 },
+            { id: 'm-2', name: 'Andheri East Office', type: 'customer', priority: 'high', capacity: 80, timeWindow: '10:00 - 18:00', lat: 19.1136, lng: 72.8697 },
+            { id: 'm-3', name: 'Powai Tech Delivery', type: 'customer', priority: 'normal', capacity: 110, timeWindow: '11:00 - 16:00', lat: 19.1176, lng: 72.9060 },
+            { id: 'm-4', name: 'Lower Parel Bulk', type: 'customer', priority: 'high', capacity: 200, timeWindow: '08:00 - 15:00', lat: 18.9977, lng: 72.8376 }
+        ],
+        edges: []
+    }
+};
