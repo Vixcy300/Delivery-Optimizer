@@ -13,20 +13,34 @@ export function LocationTag({ city = "San Francisco", country = "USA", timezone 
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
+    const timezoneMap: Record<string, string> = {
+      IST: "Asia/Kolkata",
+      PST: "America/Los_Angeles",
+      PDT: "America/Los_Angeles",
+      EST: "America/New_York",
+      EDT: "America/New_York",
+      GMT: "Europe/London",
+      BST: "Europe/London",
+      UTC: "UTC",
+    };
+
+    const ianaTimezone = timezoneMap[timezone] || "America/Los_Angeles";
+
     const updateTime = () => {
       const now = new Date();
       setCurrentTime(
         now.toLocaleTimeString("en-US", {
           hour: "2-digit",
           minute: "2-digit",
-          hour12: false,
+          hour12: true,
+          timeZone: ianaTimezone,
         })
       );
     };
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [timezone]);
 
   return (
     <button
